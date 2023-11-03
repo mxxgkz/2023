@@ -1,3 +1,6 @@
+# Run the script
+# ./PrepPython_v2/main.py ./input_files/input_default_valid.csv
+
 import argparse
 import heapq
 from typing import Any, Dict, List, Optional, Set

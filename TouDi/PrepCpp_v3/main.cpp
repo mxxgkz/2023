@@ -1,3 +1,6 @@
+// Run the executable
+// ./PrepCpp_v3/main.exe ./input_files/input_default_valid.csv
+
 #include <fstream>
 #include <iostream>
 #include <string>
