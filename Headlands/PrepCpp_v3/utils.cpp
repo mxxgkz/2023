@@ -229,5 +229,5 @@ int raiseError(const bool print_ln, const int ln)
         std::cout << ERROR_MESSAGE << std::endl;
     }
 
-    return 1;
+    return 0; // The OA actually don't want us to return non-zero value.
 }
