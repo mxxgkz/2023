@@ -1,0 +1,4 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "/Users/karlzhang/anaconda3/envs/py311/bin/pylint"
+}
