@@ -10,19 +10,19 @@
 
 int main([[maybe_unused]] int argc, char *argv[])
 {
-    // std::ifstream std::cin{"input_files/input_default_valid.csv"};
-    // std::ifstream std::cin{"input_files/input_garbage.csv"};
-    // std::string fpath = argv[1];
-    // std::cout << "Enterred input file path: " << fpath << std::endl;
+    // std::ifstream log_inf{"input_files/input_default_valid.csv"};
+    // std::ifstream log_inf{"input_files/input_garbage.csv"};
+    std::string fpath = argv[1];
+    std::cout << "Enterred input file path: " << fpath << std::endl;
 
     // std::string fpath{"input_files/input_default_valid.csv"};
 
-    // std::ifstream std::cin{fpath};
+    std::ifstream log_inf{fpath};
 
     std::unordered_map<int, Job *> map_id_to_job_ptr;
 
     int ln = 0; // line number
-    if (!std::cin)
+    if (!log_inf)
         return raiseError(PRINT_LN, ln);
     else
         ln++;
@@ -30,7 +30,7 @@ int main([[maybe_unused]] int argc, char *argv[])
     std::string log_line;
 
     // Get header
-    if (std::getline(std::cin, log_line))
+    if (std::getline(log_inf, log_line))
     {
         if (!headerIsValid(log_line))
         {
@@ -45,7 +45,7 @@ int main([[maybe_unused]] int argc, char *argv[])
 
     // Process logging line-by-line
     LineRecord line_record{};
-    while (std::getline(std::cin, log_line))
+    while (std::getline(log_inf, log_line))
     {
         if (log_line.empty())
             break;
